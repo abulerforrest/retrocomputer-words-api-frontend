@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "retrocomputer-words-list",
+  "private_key_id": "e63243a03fc2e206bb9b6a10853d11ef584192aa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDfDbxhjNNI0r2\nbG1TqTdg3u1aCmVKi0XrPgT2SsM6hHQAC1NiVzu1Kxd+JZa7tZqXg/DnecLxGTDM\nKRoNVVmpgp1kcuwCuXLoiICIdIatzxSWsI+rYaayDaD3yOuqLh02wrY88im+trnU\nmg+4GgkH/OrsqLiwwVo26i7vf1NvH++uVTPwMX4TV8q/TvtJyLva0VmH5oWKxUgj\nr+fmjpTxcyPLASoumIVc+KVggff6ioAiYQn9nVwvNhSsNHojrfiDJE+tTlrVWDV0\nKTXeqJsxZLu8bHOVh/YGg3uch5HANTcTNUKCbVGdT3CZyZDhJN93JI2P0xMEGEno\nqIeIRfKvAgMBAAECggEAB6dG0r5BfEJ7+QQ2DuGf+JZxw3sxtlvtNlsSFanH//QB\n7fiDi2Tv7QANZj5xgCg0L7zA2JyEnIIzI2MekSlnc8Kt3SoUrGdMpOb8j/BupMJn\n7h272jwIqzhBC5fIW5F89Pu6582cAx/4oZFl49F9ILIZvn89OopaDllX0hTxlCGh\nyaTnzZqFhMidIUbYH7mqAmA0UZpLab8L7I1LyD2bGHT+DxEB67FwG1A4u5IqeLom\na2cwBhovaiFW9ZembA/RSslpowCon/E4Mz/ZM/hV/rqUy0A3zLeUeKukyIzZD+jf\nedSBlB3uA96Qwj74YG6flqXX2OZiZdyMqusuLqkgUQKBgQD/cU1oW6N82CHY8Chq\nlR+vUIs60KftehNTVMhIruPgT6jlarmthVEuRFvQPJuWcp5GXguoHnur73Mo1ZEJ\npqQwjwNTLQ75audj9Pi/BXRfAUJW+Xv1OkYlNJz0H1pi/9p2rFi5mbSERxikQTLL\n8gUiT9fKhiq9vR1xhgEraPC2sQKBgQDD6WsXRgjUUdzOat11XG694c2XgoUddQmF\n5q24cIxkG/PuL67vlE6pBIaLoORU1lT46M5uMqdZUMwTI5XisLrTWb5V31nwy69H\nSBOie9zjO/dn68uOV9w2MnxPKiLLiPh0I3vDsjZAxvL5KaxGUNFqUK3XVXYvLD78\nsGzRBZxXXwKBgEsYwTwT7M1wMQs5F3i2HJmK4VPKMgRT5kiSXUtY9y9j2/COXsYP\nsp0aha+Dke46BiQD1AN56rvSapWvq7MdpZmNAdo7HfLfpeUyCMsHzH19vkYZlIK0\nvhiEDjyK1yTRuSU4Z+EwuexFho4LiOaCYVYECRnGNdyQM47DaaacdGARAoGBAJIJ\nrKezsB89SsCgTqcOmQp4iP348Gut88RZ2YOUekKhx6r05o1221AIrJbm/23yO3M0\nb7Ubkz30Cbv2meNa5FlqG4T9spjZ7LXRF7nWZSkKaXmQ/rMD8YaBCcMlYLyiRLqm\nPLr7XI/a/gIYO3BLDGAY9g1/ilLNw8IvbV4+tXU3AoGAeAmg7TRPaB8c+TVrJwOy\nZDfaZvebSErvsi7rCzhpLdxffRmD9ID530L/1iZZGPZ5+hxBW/nuQsFRVyD2g554\nvoB9CnOa4iogXVGl/PELMkPu9uw2Rcm8o0fnVSIBe38OjG6RKUAyGQwKHcVgT9dG\nOffYODH5G1XiyoxSxOYQvZE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "retrocomputer-words-list@appspot.gserviceaccount.com",
+  "client_id": "115331165212697792150",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/retrocomputer-words-list%40appspot.gserviceaccount.com"
+}
