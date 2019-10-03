@@ -1,11 +1,19 @@
-import { IMainPageController } from "../../interfaces/controllers/MainPageController";
+import { observable } from "mobx"
+
+import {
+	IMainPageController
+} from "../../interfaces/controllers/MainPageController";
 
 import { RootStore } from "../../stores/RootStore";
-import { WordStore } from "../../stores/WordStore";
 
 export class MainPageController implements IMainPageController {
 
 	private readonly rootStore: RootStore;
+
+	@observable public error: boolean = false;
+	@observable public loading: boolean = false;
+	
+	@observable public randomWord: string = "";
 
 	constructor(rootStore: RootStore) {
 		this.rootStore = rootStore;
@@ -14,7 +22,20 @@ export class MainPageController implements IMainPageController {
 	}
 
 	private async load() : Promise<void> {
-		this.rootStore.wordStore.getWords();
+
+		this.loading = true;
+
+		try {
+			const randomWordModel = await this.rootStore.wordStore.getRandomWord();
+			this.randomWord = randomWordModel.word;
+		}
+		catch(error) {
+			console.error("Wasn't able to fetch the word ;(");
+			this.error = true;
+		}
+		finally {
+			this.loading = false;
+		}
 	}
 
 }

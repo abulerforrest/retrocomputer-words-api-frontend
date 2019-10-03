@@ -1,3 +1,5 @@
+import { IWord } from "../Word";
+
 export interface IWordService {
-   getWords(): Promise<any>
+	getRandomWord(): Promise<IWord>
 }

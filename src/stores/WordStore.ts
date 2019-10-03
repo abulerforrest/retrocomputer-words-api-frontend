@@ -1,16 +1,21 @@
 import { RootStore } from "./RootStore";
+import { WordModel } from "../models/WordModel";
+
 
 export class WordStore {
 
 	private readonly rootStore: RootStore;
-	private readonly words!: string[];
 
 	constructor(rootStore: RootStore) {
 		this.rootStore = rootStore;
 	}
 
-	public async getWords() {
-		await this.rootStore.services.wordService!.getWords();
+	public async getRandomWord(): Promise<WordModel> {
+		const getRandomWord = await this.rootStore.services.wordService!.getRandomWord();
+
+		const wordModel = new WordModel(getRandomWord);
+		
+		return wordModel;
 	}
 
 }

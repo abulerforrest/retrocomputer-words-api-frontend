@@ -15,7 +15,6 @@ class Typography extends React.Component<TypographyProps> {
 		const {
 			margin,
 			fontSize,
-			className,
 			children
 		} = this.props;
 

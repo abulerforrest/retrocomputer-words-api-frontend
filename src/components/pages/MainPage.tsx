@@ -1,48 +1,83 @@
 import * as React from "react";
+
+import { observer } from "mobx-react";
+
 import "./mainpage.scss";
 
 import RandomWord from "../atoms/RandomWord/RandomWord";
 import Typography from "../atoms/Typography/Typography";
 
 import {
-	MainPageController
-} from "../../controllers/pages/MainPageController";
-
-import {
 	IMainPageController
 } from "../../interfaces/controllers/MainPageController";
+
+import {
+	GithubIcon,
+	LinkedInIcon
+} from "../atoms/Icons/Icons";
 
 interface IMainPageProps {
 	controller: IMainPageController
 }
 
+@observer
 class MainPage extends React.Component<
 	IMainPageProps
 > {
+
 	render() {
+
+		const { controller } = this.props;
+
 		return (
 			<div>
 				<header className="App-root">
-					<div className="randomTextNeon">
-						<RandomWord />
-						
+					<div className="socialIcons">
+
+						<a href="https://github.com/abulerforrest">
+							<GithubIcon />
+						</a>
+						<a href="https://www.linkedin.com/in/abulerforrest">
+							<LinkedInIcon />
+						</a>
+
 					</div>
-					<div className={"descriptionTextContainer"}>
+					
+					<RandomWord controller={controller} />
+
+					<div
+						className={"descriptionTextContainer"}
+					>
 						<Typography
 							margin={"90px 0 -38px 0"}
-						>Daily Random Word is powered by the Retro Computer Word API</Typography>
-						<Typography fontSize={15}>A collection of words from various 80's computer magazines (14474) words</Typography>
-						<Typography fontSize={15}>The api is free to use for your project</Typography>
-						<Typography fontSize={20} margin={"-35px 0 0 0"}>Get an api key below</Typography>
-						<Typography fontSize={29}>
+						>
+							The random word is powered by the Retro Computer Words API
+						</Typography>
+
+						<Typography
+							fontSize={15}
+						>
+							A collection of words from various 80's computer sources (14474) words
+						</Typography>
+					
+						<Typography
+							fontSize={29}
+						>
 							<a href="" className="link">
 								ALEXDEV.SE/RETROCOMPUTERWORDSAPI
 							</a>
 						</Typography>
+
+						<Typography
+							fontSize={15}
+						>
+							maintained by <a href="https://github.com/abulerforrest">abulerforrest</a>
+						</Typography>
+						<span className="profilePic" />
 					</div>
 				</header>
-
-			</div>);
+			</div>
+		);
 	}
 }
 

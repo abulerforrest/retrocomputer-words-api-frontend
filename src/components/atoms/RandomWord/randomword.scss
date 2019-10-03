@@ -1,0 +1,28 @@
+.error {
+	animation: rotate 1s ease-in forwards;
+}
+
+.wordContainer {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@keyframes rotate {
+	from {
+		opacity: 0;
+		transform: rotate(0deg);
+	}
+	to {
+		opacity: 1;
+		transform: rotate(90deg);
+	}
+}
+.randomTextNeon {
+	height: 150px;
+	margin-top: 80px;
+	animation: neon 5s ease-in-out infinite alternate;
+	-moz-animation: neon 5s ease-in-out infinite alternate;
+	-webkit-animation: neon 5s ease-in-out infinite alternate;
+}
