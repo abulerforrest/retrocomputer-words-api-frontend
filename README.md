@@ -1,6 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Computer Word Randomizer (site)
 
-## Available Scripts
+This is a little side project site I've built, that pulls and displays a random word from my 'Retro Computer Words Rest API' project.
+
+It shows the word in a flashy way and you can copy the random word to the clipboard.
+
+This project was made for fun to purely bring inspiration and not for any other purpose :)
+
+### Installing
 
 In the project directory, you can run:
 
@@ -9,13 +15,8 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
+The page will reload if you make edits.<br>g
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -37,32 +38,35 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Using:
 
-### Code Splitting
+* [React.JS](https://reactjs.org/) - Web framework
+* [Node.JS](https://nodejs.org/en/) - Open source server environment
+* [MobX](https://reactjs.org/) - MobX State Management
+* [Typescript](https://www.typescriptlang.org/) - Typescript
+* [Styled Components](https://www.styled-components.com/) - For styling
+* [Axios](https://github.com/axios/axios) - For making REST API calls
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Contributing
 
-### Analyzing the Bundle Size
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on the code of conduct, and the process for submitting pull requests to this project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Versioning
 
-### Making a Progressive Web App
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Authors
 
-### Advanced Configuration
+* **Alexander Bulér Forrest** - *Initial work* - [abulerforrest](https://github.com/abulerforrest)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## License
 
-### Deployment
+This project is licensed under the GNU AGPLv3 License - see [AGPLv3](https://choosealicense.com/licenses/agpl-3.0/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Acknowledgments
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* This project is a bi-product of my Retro Computer Words REST API project - To showcase words in a neat way, which has been collected from the database.
