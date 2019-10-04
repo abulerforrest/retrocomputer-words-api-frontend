@@ -9,11 +9,9 @@ type TypographyProps = {
 }
 
 const Root = styled.div`
-	display: flex;
-	font-family: ${props => props.theme.primaryFont};
-	text-transform: uppercase;
-	font-size: 20px;
-	color: white;
+	display: flex;
+	text-decoration: none;
+	color: ${props => props.theme.primaryColor};
 `;
 
 class Typography extends React.Component<TypographyProps> {
@@ -28,7 +26,7 @@ class Typography extends React.Component<TypographyProps> {
 
 		return (
 			<Root
-				style={{margin: margin, fontSize: fontSize}}
+				style={{margin: margin, fontSize: fontSize }}
 			>
 				{children}
 			</Root>

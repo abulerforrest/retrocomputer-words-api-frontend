@@ -30,32 +30,31 @@ const DescTextContainer = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	user-select: none;
 `;
 
 const Root = styled.div`
-	margin: 0;
 	display: flex;
-	color: white;
 	min-height: 100vh;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	font-size: calc(60px + 2vmin);
 `;
 
 const SocialIcons = styled.div`
 	display: flex;
 	align-content: flex-start;
 	justify-content: space-between;
+	top: 20px;
 	width: 95px;
 	position: fixed;
-	top: 20px;
 `;
 
 const BySection = styled.div`
 	display: flex;
 	margin-top: 20px;
 	margin-bottom: 10px;
+	user-select: none;
 `;
 
 const ProfilePic = styled.span`
@@ -68,6 +67,9 @@ const ProfilePic = styled.span`
 	background-repeat: no-repeat;
 	background-color: rgba(0,212,255,1);
 	background-image: url(${profilePic});
+		&:hover {
+			animation: ${props => props.theme.animationRotate360};
+		}
 `;
 
 @observer
@@ -97,6 +99,7 @@ class MainPage extends React.Component<
 					<DescTextContainer>
 						<Typography
 							fontSize={19}
+							margin="20px 0 0 0"
 			
 						>
 							The random word is powered by the Retro Computer Words API

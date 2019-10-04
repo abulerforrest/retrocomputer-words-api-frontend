@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {
-	createGlobalStyle, ThemeProvider
+	createGlobalStyle,
+	ThemeProvider
 } from "styled-components";
 
 import MainPage from "./components/pages/MainPage";
@@ -22,34 +23,29 @@ import {
 
 import { defaultTheme } from './themes/theme';
 
-const GlobalStyle: any = createGlobalStyle`
+type IGlobalStyleProps = {
+	margin: string
+	fontFamily: string
+	fontWeight: string
+	whiteSpace: string
+	textTransform: string
+	primaryBGColor: string
+	backgroundImage: string
+	letterSpacing: string
+}
+
+const GlobalStyle = createGlobalStyle<IGlobalStyleProps>`
 	body {
-		margin: 0;
-		font-weight: bold;
-		letter-spacing: 1;
-		white-space: nowrap;
-		background-color: #000000;
-		text-transform: uppercase;
-		text-decoration-color:#EB1296;
-		font-family: "Roboto", sans-serif;
+		margin: ${p => p.margin}
+		font-weight: ${p => p.fontWeight}
+		letter-spacing: ${p => p.letterSpacing}
+		white-space: ${p => p.whiteSpace};
+		text-transform: ${p => p.textTransform};
+		font-family: ${p => p.fontFamily};
+		background-color: ${p => p.primaryBGColor};
+		background-image: ${p => p.backgroundImage};
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
-		background-image:
-			linear-gradient(
-				to right top,
-				#000000,
-				#020202,
-				#050304,
-				#070507,
-				#090709,
-				#090709,
-				#090709,
-				#090709,
-				#070507,
-				#050304,
-				#020202,
-				#000000
-			);
 	}
 `;
 
@@ -60,14 +56,23 @@ const services: Partial<IServices> = {
 const rootStore = new RootStore(services);
 
 const App = () => (
-<ThemeProvider theme={defaultTheme}>
-	<React.Fragment>		
-		<GlobalStyle />
-		<MainPage
-			controller={new MainPageController(rootStore)}
-		/>
-	</React.Fragment>
-</ThemeProvider>
+	<ThemeProvider theme={defaultTheme}>
+		<React.Fragment>		
+			<GlobalStyle
+				margin={defaultTheme.defaultMargin}
+				fontFamily={defaultTheme.primaryFont}
+				backgroundImage={defaultTheme.backgroundImage}
+				textTransform={defaultTheme.defaultTextTransform}
+				primaryBGColor={defaultTheme.primaryBGColor}
+				whiteSpace={defaultTheme.defaultWhiteSpace}
+				fontWeight={defaultTheme.defaultFontWeight}
+				letterSpacing={defaultTheme.defaultLetterSpacing}
+			/>
+			<MainPage
+				controller={new MainPageController(rootStore)}
+			/>
+		</React.Fragment>
+	</ThemeProvider>
 );
 
 export default App;

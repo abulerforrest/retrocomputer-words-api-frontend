@@ -4,20 +4,18 @@ import Typography from "../Typography/Typography";
 
 import styled from "styled-components";
 
-interface IButtonProps {
+type IButtonProps = {
 	label: string
 	copiedConfirm: string
+	margin?: string
 	onClick?: () => void
 }
 
 const ButtonContainer = styled.div`
 	display: flex;
-	margin-top: -50px;
-	display: flex;
-	width: 500px;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	justify-content: center;
 `;
 
 const CopiedConfirm = styled.div`
@@ -26,12 +24,9 @@ const CopiedConfirm = styled.div`
 `;
 
 const ClipBoardCopyButton = styled.input`
-	top: 200px;
 	outline: 0;
-	background-color: transparent;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:24px;
+	border-radius: 24px;
+
 	background-image:
 		linear-gradient(to right top,
 		#dd248d,
@@ -46,27 +41,27 @@ const ClipBoardCopyButton = styled.input`
 		#09d8ff,
 		#00eeff,
 		#00fffe);
+
 	color: #ffffff;
 	border: none;
-	display:inline-block;
 	cursor: pointer;
-	color: #fff;
-	font-family:Arial;
-	font-size:15px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 0px 0px #ffffff;
+	font-family: ${props => props.theme.buttonFont};
+	font-size: ${props => props.theme.buttonFontSize};
+	padding: ${props => props.theme.buttonPadding};
+	text-decoration: none;
+	text-shadow: 0px 0px 0px ${props => props.theme.primaryColor};
 	font-weight: bold;
 	width: 200px;
-	margin: 50px;
 `;
 
 class Button extends React.Component<IButtonProps> {
 
 	render() {
 
+		const { margin } = this.props;
+
 		return (
-			<ButtonContainer>
+			<ButtonContainer style={{margin: margin}}>
 				<ClipBoardCopyButton
 					type="button"
 					value="copy to clipboard"

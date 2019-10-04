@@ -11,25 +11,34 @@ import { Button } from "../Button";
 
 import styled from "styled-components";
 
-const copy = require('clipboard-copy');
+import copy from "clipboard-copy";
 
 const ErrorMsg = styled.div`
-	animation: ${props => props.theme.animationRotate90};
+	height: 150px;
+	margin-left: -56px;
+	margin-top: 80px;
+	user-select: none;
+	font-size: calc(60px + 2vmin);
+	transform: rotate(90deg);
+	color: ${props => props.theme.primaryColor};
+	animation: ${props => props.theme.animationError};
 `;
 
 const Spinner = styled.span`
-	margin-bottom: 30px;
-	width: ${props => props.theme.spinnerDefaultWH};
-	height: ${props => props.theme.spinnerDefaultWH};
+	margin: 150px;
 	border-radius: 50%;
 	border: ${props => props.theme.spinnerBorder};
 	border-top: ${props => props.theme.spinnerBorderTop};
+	width: ${props => props.theme.spinnerDefaultWH};
+	height: ${props => props.theme.spinnerDefaultWH};
 	animation: ${props => props.theme.animationSpinner};
 `;
 
 const NeonText = styled.div`
 	height: 150px;
 	margin-top: 80px;
+	font-size: calc(60px + 2vmin);
+	color: ${props => props.theme.primaryColor};
 	animation: ${props => props.theme.animationNeon};
 `;
 
@@ -85,6 +94,7 @@ class RandomWord extends React.Component<IRandomWordProps> {
 							{ this.controller.randomWord }
 						</NeonText>
 						<Button
+							margin="0 0 50px 0"
 							onClick={this.copyText}
 							label="copy to clipboard"
 							copiedConfirm={this.copiedConfirmText}

@@ -1,13 +1,11 @@
 import { keyframes } from "styled-components";
 
-export const rotate90 = keyframes`
+export const rotate360 = keyframes`
 	from {
-		opacity: 0;
-		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
 	}
 	to {
-		opacity: 1;
-		transform: rotate(90deg);
+		-webkit-transform: rotate(360deg);
 	}
 `;
 
@@ -68,6 +66,35 @@ export const neon = keyframes`
 		opacity: 0.8;
 		filter: blur(12px);
 		-webkit-filter: blur(12px);
+	}
+	100% {
+		opacity: 1;
+		text-shadow:
+			0 0 5px #fff,
+			0 0 10px #fff,
+			0 0 15px #fff,
+			0 0 20px #00EAFF,
+			0 0 35px #00EAFF,
+			0 0 40px #00EAFF,
+			0 0 50px #00EAFF,
+			0 0 75px #00EAFF;
+	}
+`;
+
+export const neonError = keyframes`
+	0% {
+		opacity: 0;
+		filter: blur(12px);
+		-webkit-filter: blur(12px);
+		text-shadow:
+			0 0 10px #fff,
+			0 0 20px #fff,
+			0 0 30px #fff,
+			0 0 40px #FF1177,
+			0 0 70px #FF1177,
+			0 0 80px #FF1177,
+			0 0 100px #FF1177,
+			0 0 150px #FF1177;
 	}
 	100% {
 		opacity: 1;
