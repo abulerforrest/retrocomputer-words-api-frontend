@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./typography.scss";
+import styled from "styled-components";
 
 type TypographyProps = {
 	children?: React.ReactNode
@@ -7,6 +7,14 @@ type TypographyProps = {
 	fontSize?: number
 	className?: string
 }
+
+const Root = styled.div`
+	display: flex;
+	font-family: ${props => props.theme.primaryFont};
+	text-transform: uppercase;
+	font-size: 20px;
+	color: white;
+`;
 
 class Typography extends React.Component<TypographyProps> {
 
@@ -19,14 +27,11 @@ class Typography extends React.Component<TypographyProps> {
 		} = this.props;
 
 		return (
-			<div
-				className="Typography-root"
+			<Root
 				style={{margin: margin, fontSize: fontSize}}
 			>
-				<p>
-					{children}
-				</p>
-			</div>
+				{children}
+			</Root>
 		);
 	}
 }

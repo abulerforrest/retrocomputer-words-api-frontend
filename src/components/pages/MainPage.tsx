@@ -2,8 +2,6 @@ import * as React from "react";
 
 import { observer } from "mobx-react";
 
-import "./mainpage.scss";
-
 import RandomWord from "../atoms/RandomWord/RandomWord";
 import Typography from "../atoms/Typography/Typography";
 
@@ -16,9 +14,61 @@ import {
 	LinkedInIcon
 } from "../atoms/Icons/Icons";
 
+import styled from "styled-components";
+
+import profilePic from "../../assets/a.png";
+
+import { Link } from "../atoms/Link";
+
+import { defaultTheme } from "../../themes/theme";
+
 interface IMainPageProps {
 	controller: IMainPageController
 }
+
+const DescTextContainer = styled.div`
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+`;
+
+const Root = styled.div`
+	margin: 0;
+	display: flex;
+	color: white;
+	min-height: 100vh;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	font-size: calc(60px + 2vmin);
+`;
+
+const SocialIcons = styled.div`
+	display: flex;
+	align-content: flex-start;
+	justify-content: space-between;
+	width: 95px;
+	position: fixed;
+	top: 20px;
+`;
+
+const BySection = styled.div`
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 10px;
+`;
+
+const ProfilePic = styled.span`
+	width: 50px;
+	height: 50px;
+	min-height: 50px;
+	border-radius: 50%;
+	background-size: 50px;
+	border: 2px solid white;
+	background-repeat: no-repeat;
+	background-color: rgba(0,212,255,1);
+	background-image: url(${profilePic});
+`;
 
 @observer
 class MainPage extends React.Component<
@@ -30,26 +80,24 @@ class MainPage extends React.Component<
 		const { controller } = this.props;
 
 		return (
-			<div>
-				<header className="App-root">
-					<div className="socialIcons">
+				<Root>
+					<SocialIcons>
 
-						<a href="https://github.com/abulerforrest">
+						<Link href="https://github.com/abulerforrest">
 							<GithubIcon />
-						</a>
-						<a href="https://www.linkedin.com/in/abulerforrest">
+						</Link>
+						<Link href="https://www.linkedin.com/in/abulerforrest">
 							<LinkedInIcon />
-						</a>
+						</Link>
 
-					</div>
+					</SocialIcons>
 					
 					<RandomWord controller={controller} />
 
-					<div
-						className={"descriptionTextContainer"}
-					>
+					<DescTextContainer>
 						<Typography
-							margin={"90px 0 -38px 0"}
+							fontSize={19}
+			
 						>
 							The random word is powered by the Retro Computer Words API
 						</Typography>
@@ -59,24 +107,34 @@ class MainPage extends React.Component<
 						>
 							A collection of words from various 80's computer sources (14474) words
 						</Typography>
-					
-						<Typography
-							fontSize={29}
-						>
-							<a href="" className="link">
-								ALEXDEV.SE/RETROCOMPUTERWORDSAPI
-							</a>
-						</Typography>
+					</DescTextContainer>
 
-						<Typography
-							fontSize={15}
-						>
-							maintained by <a href="https://github.com/abulerforrest">abulerforrest</a>
-						</Typography>
-						<span className="profilePic" />
-					</div>
-				</header>
-			</div>
+						<Link
+								href="http://alexdev.se/retrocomputerwordsapi"
+								fontSize={29}
+								margin="80px 0 30px 0"
+								fontFamily={defaultTheme.secondaryFont}
+							>
+								ALEXDEV.SE/RETROCOMPUTERWORDSAPI
+						</Link>
+						
+						<BySection>
+							<Typography fontSize={15}>
+								maintained by 
+							</Typography>
+
+							<Link
+								href="https://github.com/abulerforrest"
+								fontSize={15}
+								margin="0 0 0 2px"
+							>
+								abulerforrest
+							</Link>
+						</BySection>
+
+						<ProfilePic />
+
+				</Root>
 		);
 	}
 }

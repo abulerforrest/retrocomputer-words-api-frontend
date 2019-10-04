@@ -14,7 +14,7 @@ export class WordStore {
 		const getRandomWord = await this.rootStore.services.wordService!.getRandomWord();
 
 		const wordModel = new WordModel(getRandomWord);
-		
+
 		return wordModel;
 	}
 

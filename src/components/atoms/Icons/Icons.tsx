@@ -1,14 +1,11 @@
-
-import * as React from "react";
-
-import "../Icons/icons.scss";
+import * as React from "react"
 
 export const GithubIcon = ({
 	style = {},
 	width = "47px",
 	className = "githubIcon",
 	height = "47px",
-	viewBox = "0 120 600 320",
+	viewBox = "0 120 600 194",
   }) => <svg
 	width={width}
 	height={height}
