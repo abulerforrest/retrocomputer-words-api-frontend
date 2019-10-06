@@ -18,9 +18,11 @@ const ButtonContainer = styled.div`
 	justify-content: center;
 `;
 
-const CopiedConfirm = styled.div`
-	margin-top: 50px;
-	position: fixed;
+const CopiedConfirm = styled.span`
+	display: flex;
+	margin-top: 15px;
+	padding-top: 60px;
+	position: absolute;
 `;
 
 const ClipBoardCopyButton = styled.input`
