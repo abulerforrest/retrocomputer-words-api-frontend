@@ -13,6 +13,7 @@ type TypographyProps = {
 	display: flex;
 	text-decoration: none;
 	color: ${props => props.theme.primaryColor};
+	font-family: ${props => props.theme.defaultFontfamily};
 `;
 
 class Link extends React.Component<TypographyProps> {

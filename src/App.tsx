@@ -5,6 +5,8 @@ import {
 	ThemeProvider
 } from "styled-components";
 
+import "./assets/fonts/roboto.ttf";
+
 import MainPage from "./components/pages/MainPage";
 
 import {
@@ -35,6 +37,11 @@ type IGlobalStyleProps = {
 }
 
 const GlobalStyle = createGlobalStyle<IGlobalStyleProps>`
+
+	@font-face {
+		font-family: "Roboto";
+		src: local('Roboto');		
+	}
 	body {
 		margin: ${p => p.margin}
 		font-weight: ${p => p.fontWeight}

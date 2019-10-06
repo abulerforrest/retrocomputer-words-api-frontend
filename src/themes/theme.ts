@@ -14,7 +14,7 @@ export const defaultTheme = {
 	primaryColor: "#ffffff",
 	primaryBGColor: "#000000",
 	primaryFont: `"Roboto", sans-serif`,
-	secondaryFont: `"Squada One", cursive`,
+	secondaryFont: `Squada One`,
 	defaultTextTransform: "uppercase",
 	defaultLetterSpacing: "1px",
 	defaultMargin: "0",
