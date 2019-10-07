@@ -20,7 +20,7 @@ export class MainPageController implements IMainPageController {
 
 		this.load();
 	}
-
+	
 	private async load() : Promise<void> {
 
 		this.loading = true;
@@ -36,6 +36,10 @@ export class MainPageController implements IMainPageController {
 		finally {
 			this.loading = false;
 		}
+	}
+
+	async getNewRandomWord() : Promise<void> {
+		this.load();
 	}
 
 }

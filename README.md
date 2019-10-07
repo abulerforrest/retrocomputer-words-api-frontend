@@ -1,10 +1,14 @@
 # Computer Word Randomizer (site)
 
-This is a little side project site I've built, that pulls and displays a random word from my 'Retro Computer Words Rest API' project.
+This is a little side project site I've put together, that pulls and displays a random word from my 'Retro Computer Words Rest API' project.
 
 It shows the word in a flashy way and you can copy the random word to the clipboard.
 
 This project was made for fun to purely bring inspiration and not for any other purpose :)
+
+## Live site
+
+Check out this project live on alexdev.se: [https://retrocomputerword.alexdev.se](https://retrocomputerword.alexdev.se/)
 
 ### Installing
 

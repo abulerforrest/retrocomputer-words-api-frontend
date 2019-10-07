@@ -6,8 +6,8 @@ import styled from "styled-components";
 
 type IButtonProps = {
 	label: string
-	copiedConfirm: string
 	margin?: string
+	copiedConfirm: string
 	onClick?: () => void
 }
 
@@ -28,7 +28,7 @@ const CopiedConfirm = styled.span`
 const ClipBoardCopyButton = styled.input`
 	outline: 0;
 	border-radius: 24px;
-
+	z-index: 1;
 	background-image:
 		linear-gradient(to right top,
 		#dd248d,

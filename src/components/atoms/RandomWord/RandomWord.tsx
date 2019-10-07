@@ -13,6 +13,8 @@ import styled from "styled-components";
 
 import copy from "clipboard-copy";
 
+import { RecycleIcon } from "../Icons";
+
 const ErrorMsg = styled.div`
 	height: 150px;
 	margin-left: -56px;
@@ -50,6 +52,10 @@ const WordContainer = styled.div`
 	flex-direction: column;
 `;
 
+const Recycle = styled.div`
+	cursor: pointer;
+`;
+
 interface IRandomWordProps {
 	controller: IMainPageController
 }
@@ -66,13 +72,18 @@ class RandomWord extends React.Component<IRandomWordProps> {
 		this.controller = props.controller;
 	}
 
-	copyText = () => {
+	copyText = () : void => {
 		const { controller } = this.props;
 
 		// copy text to clipboard
 		copy(controller.randomWord);
 		
 		this.copiedConfirmText = `Copied ${controller.randomWord} to clipboard!`;
+	}
+
+	getNewRandomWord() : void {
+		this.controller.getNewRandomWord();
+		this.copiedConfirmText = "";
 	}
 
 	renderWord() {
@@ -99,6 +110,9 @@ class RandomWord extends React.Component<IRandomWordProps> {
 							label="copy to clipboard"
 							copiedConfirm={this.copiedConfirmText}
 						/>
+						<Recycle onClick={() => this.getNewRandomWord()}>
+							<RecycleIcon />
+						</Recycle>
 					</WordContainer>
 				);
 			}

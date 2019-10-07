@@ -113,12 +113,12 @@ class MainPage extends React.Component<
 					</DescTextContainer>
 
 						<Link
-								href="http://alexdev.se/retrocomputerwordsapi"
+								href="http://retrocomputerwordsapi.alexdev.se"
 								fontSize={29}
 								margin="80px 0 30px 0"
 								fontFamily={defaultTheme.secondaryFont}
 							>
-								ALEXDEV.SE/RETROCOMPUTERWORDSAPI
+								retrocomputerwordsapi.alexdev.se
 						</Link>
 						
 						<BySection>
@@ -136,7 +136,6 @@ class MainPage extends React.Component<
 						</BySection>
 
 						<ProfilePic />
-
 				</Root>
 		);
 	}
