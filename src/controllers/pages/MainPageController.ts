@@ -12,6 +12,7 @@ export class MainPageController implements IMainPageController {
 
 	@observable public error: boolean = false;
 	@observable public loading: boolean = false;
+	@observable public total: string = "";
 	
 	@observable public randomWord: string = "";
 
@@ -26,20 +27,32 @@ export class MainPageController implements IMainPageController {
 		this.loading = true;
 
 		try {
+			this.getTotalCount();
+	
 			const randomWordModel = await this.rootStore.wordStore.getRandomWord();
 			this.randomWord = randomWordModel.word;
+
 		}
-		catch(error) {
-			console.error("Wasn't able to fetch the word ;(");
+		catch(err) {
+			console.error(err, "Wasn't able to fetch the word ;(");
 			this.error = true;
 		}
 		finally {
 			this.loading = false;
 		}
+
 	}
 
-	async getNewRandomWord() : Promise<void> {
+	public async getNewRandomWord() : Promise<void> {
 		this.load();
+	}
+
+	private async getTotalCount() {
+		if(sessionStorage.getItem('totalCount') === null) {
+			const total = await this.rootStore.wordStore.getTotalWordsCount();
+			sessionStorage.setItem('totalCount', `${total}`);
+		}
+		this.total = sessionStorage.getItem('totalCount')!;
 	}
 
 }

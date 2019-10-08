@@ -108,7 +108,7 @@ class MainPage extends React.Component<
 						<Typography
 							fontSize={15}
 						>
-							A collection of words from various 80's computer sources (14474) words
+							A collection of words from various 80's computer sources ({controller.total}) words
 						</Typography>
 					</DescTextContainer>
 

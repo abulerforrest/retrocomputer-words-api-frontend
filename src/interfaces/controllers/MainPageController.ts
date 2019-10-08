@@ -1,6 +1,7 @@
 export interface IMainPageController {
 	randomWord: string
-	loading: boolean
+	total: string
 	error: boolean
+	loading: boolean
 	getNewRandomWord: () => void
 }
