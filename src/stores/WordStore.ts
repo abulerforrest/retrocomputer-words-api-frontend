@@ -20,9 +20,6 @@ export class WordStore {
 
 	public async getTotalWordsCount(): Promise<number> {
 		const totalWordsCount = await this.rootStore.services.wordService!.getTotalWordsCount();
-
-		console.log(totalWordsCount)
-
 		return totalWordsCount;
 	}
 
